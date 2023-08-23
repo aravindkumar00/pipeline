@@ -1,7 +1,7 @@
 node{
     def maven=tool name:"maven3.9.4"
     stage("clone the project"){
-        git credentialsId: '087b1f83-af76-4103-95c2-770a4e60e7ff', url: 'https://github.com/aravindkumar00/maven-web-application.git'
+        git branch: 'main', credentialsId: '087b1f83-af76-4103-95c2-770a4e60e7ff', url: 'https://github.com/aravindkumar00/pipeline.git'
     }
     stage("Build"){
         sh "$maven/bin/mvn clean package"
